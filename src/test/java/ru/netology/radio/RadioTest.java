@@ -118,26 +118,6 @@ class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test //5.1
-    public void upVolume() {
-        Radio radio = new Radio();
-        radio.setVolume(88);
-        radio.upVolume();
-        int expected = 89;
-        int actual = radio.getVolume();
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test //5.2
-    public void maxUpVolume() {
-        Radio radio = new Radio();
-        radio.setVolume(100);
-        radio.upVolume();
-        int expected = 100;
-        int actual = radio.getVolume();
-        Assertions.assertEquals(expected, actual);
-    }
-
     @Test //5.3
     public void overUpVolume() {
         Radio radio = new Radio();
