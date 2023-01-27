@@ -110,20 +110,28 @@ class RadioTest {
     }
 
     @Test //4.3
+    public void maxVolume() {
+        Radio radio = new Radio();
+        radio.setVolume(10);
+        int expected = 10;
+        int actual = radio.getVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test //4.3
     public void overMaxVolume() {
         Radio radio = new Radio();
-        radio.setVolume(101);
+        radio.setVolume(11);
         int expected = 0;
         int actual = radio.getVolume();
         Assertions.assertEquals(expected, actual);
     }
 
     @Test //5.3
-    public void overUpVolume() {
+    public void UpVolume() {
         Radio radio = new Radio();
-        radio.setVolume(101);
+        radio.setVolume(9);
         radio.upVolume();
-        int expected = 1;
+        int expected = 10;
         int actual = radio.getVolume();
         Assertions.assertEquals(expected, actual);
     }
