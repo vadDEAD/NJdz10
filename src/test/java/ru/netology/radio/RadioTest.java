@@ -12,6 +12,15 @@ class RadioTest {
         int actual = radio.getStation();
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void station(){
+        Radio radio = new Radio(20);
+        radio.setStation(19);
+        int expected = 19;
+        int actual = radio.getStation();
+        Assertions.assertEquals(expected, actual);
+
+    }
 
     @Test //1.2
     public void overMaxStation() {
